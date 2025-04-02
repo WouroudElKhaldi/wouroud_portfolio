@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Calendar, MapPin, Building2 } from "lucide-react";
 import SkillsCarousel from "./skills-carousel";
@@ -258,7 +257,7 @@ export default function AboutMe() {
                     {/* Content */}
                     <div className="md:w-1/2 p-6 bg-gray-900/50 rounded-xl backdrop-blur-sm border border-gray-800">
                       <div className="flex flex-col md:flex-row items-center gap-4">
-                        <div className="w-16 h-16 md:w-12 md:h-12 rounded-full bg-gray-800 flex items-center justify-center overflow-hidden mb-4 md:mb-0 mx-auto md:mx-0">
+                        {/* <div className="w-16 h-16 md:w-12 md:h-12 rounded-full bg-gray-800 flex items-center justify-center overflow-hidden mb-4 md:mb-0 mx-auto md:mx-0">
                           <Image
                             src={item.logo || "/placeholder.svg"}
                             alt={item.company}
@@ -266,7 +265,7 @@ export default function AboutMe() {
                             height={56}
                             className="rounded-full"
                           />
-                        </div>
+                        </div> */}
                         <div className="text-center md:text-left">
                           <h3 className="text-xl font-bold text-white">
                             {item.role}

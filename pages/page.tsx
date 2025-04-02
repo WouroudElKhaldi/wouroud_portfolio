@@ -11,7 +11,6 @@ import {
   Calendar,
   FileText,
   Headset,
-  Smartphone,
   ShieldBan,
   MonitorSmartphone,
   CreditCard,
@@ -28,6 +27,7 @@ import Loading from "@/components/loading";
 import InteractiveShapes from "@/components/InteractiveShapes";
 import AnimatedBoxes from "@/components/AnimatedBoxes";
 import ProjectCarousel from "@/components/project-carousel";
+import ContactForm from "@/components/contact-form";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -44,12 +44,6 @@ export default function Home() {
 
   if (!mounted) return null;
   if (loading) return <Loading />;
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // You can add a console.log here if you want to verify it's working
-    console.log("Form submission prevented");
-  };
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
@@ -74,7 +68,8 @@ export default function Home() {
               {`Hey! It's Wouroud EL Khaldi`}
             </h1>
             <h2 className="text-xl md:text-2xl mb-8 text-gray-300">
-              🌐 Full-Stack Developer | 🎨 UI/UX Designer | 🔐 Web Security Enthusiast{" "}
+              🌐 Full-Stack Developer | 🎨 UI/UX Designer | 🔐 Web Security
+              Enthusiast{" "}
             </h2>
             <div className="flex flex-wrap justify-center gap-4">
               <ScrollLink to="work" smooth={true} duration={500}>
@@ -200,56 +195,7 @@ export default function Home() {
             </h2>
             <div className="max-w-3xl mx-auto">
               <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
-                <form className="space-y-4" onSubmit={handleSubmit}>
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-gray-400"
-                    >
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      className="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white px-4 py-3"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-400"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white px-4 py-3"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-gray-400"
-                    >
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      className="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white px-4 py-3"
-                    ></textarea>
-                  </div>
-                  <Button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
-                  >
-                    Send Message
-                  </Button>
-                </form>
+                <ContactForm />
                 <div className="mt-6 text-center">
                   <p className="text-gray-400 mb-2">
                     Prefer to schedule a meeting?
@@ -286,15 +232,15 @@ export default function Home() {
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <SocialIcon
               icon={<Github />}
-              href="https://WouroudElKhaldi"
+              href="https://github.com/WouroudElKhaldi"
               label="GitHub"
             />
             <SocialIcon
               icon={<Linkedin />}
-              href="https://https://www.linkedin.com/in/wouroud-el-khaldi-83016820b"
+              href="https://www.linkedin.com/in/wouroud-el-khaldi-83016820b"
               label="LinkedIn"
             />
-            <SocialIcon
+            {/* <SocialIcon
               icon={<Smartphone />}
               href="#"
               label="Mobile Apps"
@@ -304,7 +250,7 @@ export default function Home() {
                 // You can add a console.log here if you want to verify it's working
                 console.log("Mobile icon click prevented");
               }}
-            />
+            /> */}
           </div>
           <div className="text-center text-gray-500 text-sm">
             <p>

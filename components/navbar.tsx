@@ -92,7 +92,7 @@ export default function Navbar() {
             <Calendar size={24} />
           </motion.a>
           <motion.a
-            href="https://WouroudElKhaldi"
+            href="https://github.com/WouroudElKhaldi"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-white transition-colors duration-300"
@@ -104,7 +104,7 @@ export default function Navbar() {
             <Github size={24} />
           </motion.a>
           <motion.a
-            href="https://https://www.linkedin.com/in/wouroud-el-khaldi-83016820b"
+            href="https://www.linkedin.com/in/wouroud-el-khaldi-83016820b"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-white transition-colors duration-300"
@@ -132,7 +132,7 @@ export default function Navbar() {
             <Calendar size={24} />
           </motion.a>
           <motion.a
-            href="https://WouroudElKhaldi"
+            href="https://github.com/WouroudElKhaldi"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-white transition-colors duration-300"
@@ -144,7 +144,7 @@ export default function Navbar() {
             <Github size={24} />
           </motion.a>
           <motion.a
-            href="https://https://www.linkedin.com/in/wouroud-el-khaldi-83016820b"
+            href="https://www.linkedin.com/in/wouroud-el-khaldi-83016820b"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-white transition-colors duration-300"
