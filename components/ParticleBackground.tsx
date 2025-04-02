@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import { useCallback, useMemo } from "react"
-import Particles from "react-tsparticles"
-import { loadSlim } from "tsparticles-slim"
-import type { Engine } from "tsparticles-engine"
+import { useCallback, useMemo } from "react";
+import Particles from "react-tsparticles";
+import { loadSlim } from "tsparticles-slim";
+import type { Engine, MoveDirection, ISourceOptions } from "tsparticles-engine";
 
 const ParticleBackground = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
-    await loadSlim(engine)
-  }, [])
+    await loadSlim(engine);
+  }, []);
 
-  const options = useMemo(
+  const options: ISourceOptions = useMemo(
     () => ({
       background: {
         color: {
@@ -56,7 +56,7 @@ const ParticleBackground = () => {
           width: 1,
         },
         move: {
-          direction: "none",
+          direction: "none" as MoveDirection, // ✅ Explicitly cast
           enable: true,
           outModes: {
             default: "bounce",
@@ -84,11 +84,17 @@ const ParticleBackground = () => {
       },
       detectRetina: true,
     }),
-    [],
-  )
+    []
+  );
 
-  return <Particles id="tsparticles" init={particlesInit} options={options} className="absolute inset-0" />
-}
+  return (
+    <Particles
+      id="tsparticles"
+      init={particlesInit}
+      options={options}
+      className="absolute inset-0"
+    />
+  );
+};
 
-export default ParticleBackground
-
+export default ParticleBackground;

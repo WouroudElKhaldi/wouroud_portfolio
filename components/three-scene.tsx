@@ -1,38 +1,34 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import { Canvas } from "@react-three/fiber"
-import { OrbitControls } from "@react-three/drei"
-import dynamic from "next/dynamic"
-import * as THREE from "three"
-import FloatingBoxes from "./floating-boxes"
-import ParticlesAnimation from "./particles-animation"
+import { useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import * as THREE from "three";
+import ParticlesAnimation from "./particles-animation";
 
 function Scene() {
-  const groupRef = useRef()
-
-  // const useThree = dynamic(() => import("@react-three/fiber").then((mod) => mod.useThree), {
-  //   ssr: false,
-  // })
-  const useFrame = dynamic(() => import("@react-three/fiber").then((mod) => mod.useFrame), {
-    ssr: false,
-  })
-
-  // const { camera } = useThree()
+  const groupRef = useRef<THREE.Group | null>(null);
 
   useFrame(({ mouse }) => {
     if (groupRef.current) {
-      groupRef.current.rotation.y = THREE.MathUtils.lerp(groupRef.current.rotation.y, mouse.x * 0.5, 0.1)
-      groupRef.current.rotation.x = THREE.MathUtils.lerp(groupRef.current.rotation.x, mouse.y * 0.5, 0.1)
+      groupRef.current.rotation.y = THREE.MathUtils.lerp(
+        groupRef.current.rotation.y,
+        mouse.x * 0.5,
+        0.1
+      );
+      groupRef.current.rotation.x = THREE.MathUtils.lerp(
+        groupRef.current.rotation.x,
+        mouse.y * 0.5,
+        0.1
+      );
     }
-  })
+  });
 
   return (
     <group ref={groupRef}>
       <ParticlesAnimation />
-      <FloatingBoxes />
     </group>
-  )
+  );
 }
 
 export default function ThreeScene() {
@@ -43,6 +39,5 @@ export default function ThreeScene() {
       <Scene />
       <OrbitControls />
     </Canvas>
-  )
+  );
 }
-
