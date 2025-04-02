@@ -11,14 +11,14 @@ import ParticlesAnimation from "./particles-animation"
 function Scene() {
   const groupRef = useRef()
 
-  const useThree = dynamic(() => import("@react-three/fiber").then((mod) => mod.useThree), {
-    ssr: false,
-  })
+  // const useThree = dynamic(() => import("@react-three/fiber").then((mod) => mod.useThree), {
+  //   ssr: false,
+  // })
   const useFrame = dynamic(() => import("@react-three/fiber").then((mod) => mod.useFrame), {
     ssr: false,
   })
 
-  const { camera } = useThree()
+  // const { camera } = useThree()
 
   useFrame(({ mouse }) => {
     if (groupRef.current) {

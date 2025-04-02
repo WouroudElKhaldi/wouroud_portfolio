@@ -90,7 +90,6 @@ function ProjectCarousel() {
                 title={project.title}
                 description={project.description}
                 tags={project.tags}
-                image={project.image}
               />
             ))}
           </div>
@@ -103,12 +102,10 @@ function ProjectCard({
   title,
   description,
   tags,
-  image,
 }: {
   title: string;
   description: string;
   tags: string[];
-  image?: string;
 }) {
   return (
     <div className="p-6 rounded-lg bg-gray-900 border border-gray-800 hover:border-purple-500 transition-all duration-300">

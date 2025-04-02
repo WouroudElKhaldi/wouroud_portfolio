@@ -156,7 +156,8 @@ export default function AboutMe() {
                 <p className="text-lg leading-relaxed md:hidden">
                   Full Stack Engineer 💻, UI/UX Designer 🎨, and Web Security
                   Enthusiast 🔐. Passionate about creating seamless user
-                  experiences while building robust, secure applications. Let's
+                  experiences while building robust, secure applications.
+                  {` Let's `}
                   turn complex ideas into innovative solutions! 🚀
                 </p>
 
@@ -199,27 +200,30 @@ export default function AboutMe() {
                     </span>
                     , and much more. I also have a strong background in{" "}
                     <strong>UI/UX design</strong> (Figma is my canvas 🖌️),
-                    helping to create intuitive, user-friendly interfaces. I'm
+                    helping to create intuitive, user-friendly interfaces.
+                    {` I'm `}
                     constantly exploring new trends in{" "}
                     <strong>cybersecurity</strong> to ensure that the solutions
                     I build are not only functional but also safe and secure 🛡️.
                   </p>
                   <p className="mb-4 text-lg">
-                    When I'm not coding, you'll find me learning about the
-                    latest in <strong>web security</strong> 🔍, diving into{" "}
+                    When{` I'm `}not coding,{` you'll `}find me learning about
+                    the latest in <strong>web security</strong> 🔍, diving into{" "}
                     <strong>full-stack development</strong> 🖥️, or designing
-                    polished interfaces 🖌️. I'm always open to collaborating 🤝,
-                    solving tough problems 🧩, and creating things that push the
-                    boundaries of what's possible on the web 🌐.
+                    polished interfaces 🖌️.{` I'm `}always open to collaborating
+                    🤝, solving tough problems 🧩, and creating things that push
+                    the boundaries of{` what's `}possible on the web 🌐.
                   </p>
                   <p className="text-lg">
                     <strong>
-                      Let's connect, collaborate, and build something amazing!
+                      {` Let's `}connect, collaborate, and build something
+                      amazing!
                     </strong>{" "}
-                    Whether it's creating high-performance, secure applications
-                    or crafting designs that users love 💖, I'm always up for a
-                    challenge. The future of the web is bright 🌟, and I'm here
-                    to make my mark. 🌍
+                    Whether{` it's `}creating high-performance, secure
+                    applications or crafting designs that users love 💖,
+                    {` I'm `}always up for a challenge. The future of the web is
+                    bright 🌟, and
+                    {` I'm `}here to make my mark. 🌍
                   </p>
                 </div>
               </div>
