@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://wouroud.vercel.app
+
+# Sitemaps
+Sitemap: https://wouroud.vercel.app/sitemap.xml
