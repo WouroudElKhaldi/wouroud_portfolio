@@ -9,31 +9,27 @@ import "swiper/css/pagination";
 function ProjectCarousel() {
   const projects = [
     {
-      title: "Technow",
+      title: "Aalemni Design & Development",
       description:
-        "Newsletter website with an admin dashboard, built as a group project.",
-      tags: ["MERN Stack", "Admin Dashboard", "Newsletter"],
-      image: "/images/technow.jpg",
+        "Full-stack development and UI/UX design for the Aalemni platform, focusing on intuitive user interfaces, seamless user experience, and robust backend functionality.",
+      tags: [
+        "UI/UX Design",
+        "Figma",
+        "User Interface",
+        "Prototyping",
+        "Next.js",
+        "Supabase",
+        "Full-Stack Development",
+        "E-Learning Platform",
+      ],
+      image: "/images/aalemni-design.jpg",
     },
     {
-      title: "Money Minder",
+      title: "DeveLeb Design (UI/UX)",
       description:
-        "FinTech financial tracker dashboard, developed as a group project.",
-      tags: ["React", "Node.js", "Sequelize", "Express.js", "FinTech"],
-      image: "/images/money-minder.jpg",
-    },
-    {
-      title: "Hotel Express",
-      description: "Hotel management website, developed as a group project.",
-      tags: ["React", "Node.js", "Sequelize", "Express.js"],
-      image: "/images/hotel-express.jpg",
-    },
-    {
-      title: "Lalezar",
-      description:
-        "E-commerce platform for spices, developed as a group project.",
-      tags: ["MERN Stack", "E-commerce", "Spices"],
-      image: "/images/lalezar.jpg",
+        "Full UI/UX design for the DeveLeb community website, including wireframes, mockups, and prototypes.",
+      tags: ["UI/UX Design", "Figma", "Wireframing", "Prototyping"],
+      image: "/images/develeb-design.jpg",
     },
     {
       title: "CoSpace",
@@ -49,18 +45,32 @@ function ProjectCarousel() {
       image: "/images/cospace.jpg",
     },
     {
-      title: "DeveLeb Design (UI/UX)",
+      title: "Lalezar",
       description:
-        "Full UI/UX design for the DeveLeb community website, including wireframes, mockups, and prototypes.",
-      tags: ["UI/UX Design", "Figma", "Wireframing", "Prototyping"],
-      image: "/images/develeb-design.jpg",
+        "E-commerce platform for spices, developed as a group project.",
+      tags: ["MERN Stack", "E-commerce", "Spices"],
+      image: "/images/lalezar.jpg",
     },
     {
-      title: "Aalemni Design (UI/UX)",
+      title: "Hotel Express",
+      description: "Hotel management website, developed as a group project.",
+      tags: ["React", "Node.js", "Sequelize", "Express.js"],
+      image: "/images/hotel-express.jpg",
+    },
+    {
+      title: "Money Minder",
       description:
-        "UI/UX design for the Aalemni platform, focusing on intuitive user interfaces and seamless user experience.",
-      tags: ["UI/UX Design", "Figma", "User Interface", "Prototyping"],
-      image: "/images/aalemni-design.jpg",
+        "FinTech financial tracker dashboard, developed as a group project.",
+      tags: ["React", "Node.js", "Sequelize", "Express.js", "FinTech"],
+      image: "/images/money-minder.jpg",
+    },
+
+    {
+      title: "Technow",
+      description:
+        "Newsletter website with an admin dashboard, built as a group project.",
+      tags: ["MERN Stack", "Admin Dashboard", "Newsletter"],
+      image: "/images/technow.jpg",
     },
   ];
 

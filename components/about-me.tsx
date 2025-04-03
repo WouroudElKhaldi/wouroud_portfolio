@@ -64,43 +64,43 @@ const skillsData = {
     { name: "Shopify", proficiency: 80 },
   ],
   "Authentication & Security": [
-    { name: "OAuth", proficiency: 75 },
-    { name: "JWT", proficiency: 85 },
+    { name: "OAuth", proficiency: 90 },
+    { name: "JWT", proficiency: 95 },
     { name: "Web Security Best Practices", proficiency: 70 },
   ],
   "API Development & Documentation": [
     { name: "REST APIs", proficiency: 90 },
-    { name: "GraphQL", proficiency: 70 },
+    { name: "GraphQL", proficiency: 75 },
     { name: "Swagger", proficiency: 85 },
   ],
   "Payment Integration": [
-    { name: "Binance Pay", proficiency: 80 },
-    { name: "Fincra", proficiency: 75 },
-    { name: "Whish", proficiency: 70 },
-    { name: "Pay Tree", proficiency: 70 },
-    { name: "Coinsbuy", proficiency: 70 },
-    { name: "Pagadito", proficiency: 70 },
-    { name: "Credimax", proficiency: 70 },
-    { name: "Orbital", proficiency: 70 },
-    { name: "Hubtel", proficiency: 70 },
-    { name: "Upay", proficiency: 70 },
-    { name: "PayAtom", proficiency: 70 },
-    { name: "OfaPay", proficiency: 70 },
-    { name: "Bridger Pay", proficiency: 70 },
-    { name: "Bitwallet", proficiency: 70 },
-    { name: "DP Pay", proficiency: 70 },
+    { name: "Binance Pay", proficiency: 90 },
+    { name: "Fincra", proficiency: 90 },
+    { name: "Whish", proficiency: 90 },
+    { name: "Pay Tree", proficiency: 90 },
+    { name: "Coinsbuy", proficiency: 90 },
+    { name: "Pagadito", proficiency: 90 },
+    { name: "Credimax", proficiency: 90 },
+    { name: "Orbital", proficiency: 90 },
+    { name: "Hubtel", proficiency: 90 },
+    { name: "Upay", proficiency: 90 },
+    { name: "PayAtom", proficiency: 90 },
+    { name: "OfaPay", proficiency: 90 },
+    { name: "Bridger Pay", proficiency: 90 },
+    { name: "Bitwallet", proficiency: 90 },
+    { name: "DP Pay", proficiency: 90 },
   ],
   "KYC Integrations": [
-    { name: "Sumsub", proficiency: 70 },
-    { name: "Shufti", proficiency: 70 },
-    { name: "Coinkade", proficiency: 70 },
+    { name: "Sumsub", proficiency: 90 },
+    { name: "Shufti", proficiency: 90 },
+    { name: "Coinkade", proficiency: 90 },
   ],
   "Trading Platform Integrations": [
-    { name: "MT4", proficiency: 70 },
-    { name: "MT5", proficiency: 70 },
-    { name: "TradeLocker", proficiency: 70 },
-    { name: "Ark Trader", proficiency: 70 },
-    { name: "Vertex", proficiency: 70 },
+    { name: "MT4", proficiency: 85 },
+    { name: "MT5", proficiency: 80 },
+    { name: "TradeLocker", proficiency: 80 },
+    { name: "Ark Trader", proficiency: 90 },
+    { name: "Vertex", proficiency: 80 },
   ],
   "CI/CD & Deployment": [
     { name: "Vercel", proficiency: 90 },
@@ -121,10 +121,10 @@ const skillsData = {
 export default function AboutMe() {
   return (
     <section
-      id="about"
-      className="py-12 bg-gradient-to-b from-black to-gray-900"
+      id="about_2"
+      className="py-10 bg-gradient-to-b from-black to-gray-900"
     >
-      <div className="containe mx-auto">
+      <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

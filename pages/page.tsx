@@ -15,6 +15,7 @@ import {
   MonitorSmartphone,
   CreditCard,
   Link2,
+  MessageCircleMore,
   //   PenTool,
 } from "lucide-react";
 import { Link as ScrollLink } from "react-scroll";
@@ -23,11 +24,12 @@ import Navbar from "@/components/navbar";
 import SocialIcon from "@/components/social-icon";
 import { Button } from "@/components/ui/button";
 import AboutMe from "@/components/about-me";
-import Loading from "@/components/loading";
+// import Loading from "@/components/loading";
 import InteractiveShapes from "@/components/InteractiveShapes";
 import AnimatedBoxes from "@/components/AnimatedBoxes";
 import ProjectCarousel from "@/components/project-carousel";
 import ContactForm from "@/components/contact-form";
+import DottieAnimation from "@/components/dottie-animation";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -43,7 +45,10 @@ export default function Home() {
   }, []);
 
   if (!mounted) return null;
-  if (loading) return <Loading />;
+  if (loading)
+    return (
+      <DottieAnimation src="https://lottie.host/bfdb0b16-4ff2-4a10-a133-4fce3d591edf/7ve6csy0VT.lottie" />
+    );
 
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">
@@ -93,7 +98,7 @@ export default function Home() {
       {/* About Section */}
       <section
         id="about"
-        className="py-20 bg-gradient-to-b from-black to-gray-900"
+        className="py-10 bg-gradient-to-b from-black to-gray-900"
       >
         <div className="container px-2 mx-auto">
           <AboutMe />
@@ -234,6 +239,11 @@ export default function Home() {
               icon={<Github />}
               href="https://github.com/WouroudElKhaldi"
               label="GitHub"
+            />{" "}
+            <SocialIcon
+              icon={<MessageCircleMore />}
+              href="https://wa.me/+96181877217?text=Hello%20Wouroud!%20I%20would%20like%20to%20chat"
+              label="Whatsapp"
             />
             <SocialIcon
               icon={<Linkedin />}

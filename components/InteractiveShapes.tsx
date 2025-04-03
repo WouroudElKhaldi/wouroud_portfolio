@@ -1,37 +1,46 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
-import { motion } from "framer-motion"
+import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 
 const shapes = [
   { type: "circle", size: 50 },
   { type: "square", size: 40 },
   { type: "triangle", size: 60 },
-]
+  { type: "square", size: 40 },
+  { type: "triangle", size: 45 },
+  { type: "circle", size: 70 },
+  { type: "triangle", size: 30 },
+  { type: "square", size: 40 },
+  { type: "circle", size: 50 },
+];
 
 export default function InteractiveShapes() {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      const { clientX, clientY } = e
-      const shapes = containerRef.current?.children
+      const { clientX, clientY } = e;
+      const shapes = containerRef.current?.children;
       if (shapes) {
         Array.from(shapes).forEach((shape: Element, index) => {
-          const speed = (index + 1) * 0.5
-          const x = (window.innerWidth - clientX * speed) / 100
-          const y = (window.innerHeight - clientY * speed) / 100
-          ;(shape as HTMLElement).style.transform = `translate(${x}px, ${y}px)`
-        })
+          const speed = (index + 1) * 0.5;
+          const x = (window.innerWidth - clientX * speed) / 25;
+          const y = (window.innerHeight - clientY * speed) / 25;
+          (shape as HTMLElement).style.transform = `translate(${x}px, ${y}px)`;
+        });
       }
-    }
+    };
 
-    window.addEventListener("mousemove", handleMouseMove)
-    return () => window.removeEventListener("mousemove", handleMouseMove)
-  }, [])
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, []);
 
   return (
-    <div ref={containerRef} className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div
+      ref={containerRef}
+      className="fixed inset-0 pointer-events-none z-0 overflow-hidden"
+    >
       {shapes.map((shape, index) => (
         <motion.div
           key={index}
@@ -49,6 +58,5 @@ export default function InteractiveShapes() {
         />
       ))}
     </div>
-  )
+  );
 }
-

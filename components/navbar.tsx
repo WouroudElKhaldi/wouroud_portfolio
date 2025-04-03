@@ -5,7 +5,14 @@ import type React from "react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Github, Linkedin, Calendar } from "lucide-react";
+import {
+  Menu,
+  X,
+  Github,
+  Linkedin,
+  Calendar,
+  MessageCircleMore,
+} from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -104,6 +111,18 @@ export default function Navbar() {
             <Github size={24} />
           </motion.a>
           <motion.a
+            href="https://wa.me/+96181877217?text=Hello%20Wouroud!%20I%20would%20like%20to%20chat"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-white transition-colors duration-300"
+            aria-label="Whapptsa"
+            variants={iconVariants}
+            initial="initial"
+            whileHover="hover"
+          >
+            <MessageCircleMore size={24} />
+          </motion.a>
+          <motion.a
             href="https://www.linkedin.com/in/wouroud-el-khaldi-83016820b"
             target="_blank"
             rel="noopener noreferrer"
@@ -142,6 +161,18 @@ export default function Navbar() {
             whileHover="hover"
           >
             <Github size={24} />
+          </motion.a>
+          <motion.a
+            href="https://wa.me/+96181877217?text=Hello%20Wouroud!%20I%20would%20like%20to%20chat"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-white transition-colors duration-300"
+            aria-label="Whapptsa"
+            variants={iconVariants}
+            initial="initial"
+            whileHover="hover"
+          >
+            <MessageCircleMore size={24} />
           </motion.a>
           <motion.a
             href="https://www.linkedin.com/in/wouroud-el-khaldi-83016820b"

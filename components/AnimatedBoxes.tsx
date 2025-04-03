@@ -12,7 +12,7 @@ interface Box {
 
 const Box = React.memo(({ x, y, size, delay }: Omit<Box, "id">) => (
   <div
-    className="absolute bg-gray-300 opacity-10 animate-float"
+    className="absolute bg-gray-300 opacity-5 animate-float"
     style={{
       width: size,
       height: size,
@@ -31,7 +31,8 @@ const AnimatedBoxes = () => {
 
   const generateBoxes = useCallback(() => {
     const newBoxes: Box[] = []
-    const boxCount = Math.floor((window.innerWidth * window.innerHeight) / 80000) + 2 // Increased box count
+    const boxCount = Math.floor((window.innerWidth * window.innerHeight) / 95000) // Increased box count
+    console.log(boxCount);
     for (let i = 0; i < boxCount; i++) {
       const x = (Math.random() * 0.6 + 0.2) * window.innerWidth
       const y = (Math.random() * 0.6 + 0.2) * window.innerHeight
