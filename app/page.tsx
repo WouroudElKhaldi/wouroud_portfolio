@@ -2,7 +2,7 @@
 import Home from "@/pages/page";
 import React from "react";
 
-export default function Page() {
+export default async function Page() {
   return (
     <>
       <Home />
