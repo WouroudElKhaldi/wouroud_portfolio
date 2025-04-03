@@ -11,35 +11,34 @@ import "swiper/css/pagination";
 function SkillsCarousel({
   skillsData,
 }: {
-  skillsData: Record<string, { name: string; proficiency: number }[]>;
+  skillsData: Record<string, { name: string; proficiency: number }[]>; // The skills data should be grouped by category
 }) {
-  const categories = Object.entries(skillsData);
-  const groupedCategories = [];
-
-  // Group every 3 skill categories together
-  for (let i = 0; i < categories.length; i += 3) {
-    groupedCategories.push(categories.slice(i, i + 3));
-  }
-
   return (
     <Swiper
       modules={[Navigation, Pagination]}
       navigation
       pagination={{ clickable: true }}
       spaceBetween={30}
-      slidesPerView={1}
-      className="w-full"
+      slidesPerView={1} // Default to 1 slide per view
+      loop={true}
+      autoplay={true}
+      breakpoints={{
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      }}
+      className="!pr-6 !pl-6 w-full"
     >
-      {groupedCategories.map((group, index) => (
+      {Object.entries(skillsData).map(([category, skills], index) => (
         <SwiperSlide key={index} className="flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full px-12">
-            {group.map(([category, skills]) => (
-              <SkillCategory
-                key={category}
-                category={category}
-                skills={skills}
-              />
-            ))}
+          <div className="grid grid-cols-1 w-full px-5">
+            <SkillCategory category={category} skills={skills} />
           </div>
         </SwiperSlide>
       ))}

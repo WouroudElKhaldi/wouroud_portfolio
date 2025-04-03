@@ -74,12 +74,6 @@ function ProjectCarousel() {
     },
   ];
 
-  // Grouping projects into chunks of 3
-  const groupedProjects = [];
-  for (let i = 0; i < projects.length; i += 3) {
-    groupedProjects.push(projects.slice(i, i + 3));
-  }
-
   return (
     <Swiper
       modules={[Navigation, Pagination]}
@@ -88,20 +82,28 @@ function ProjectCarousel() {
       spaceBetween={30}
       slidesPerView={1}
       loop={true}
-      autoplay={{ delay: 3000 }}
-      className="w-full"
+      autoplay={true}
+      breakpoints={{
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      }}
+      className="!pr-6 !pl-6 w-full"
     >
-      {groupedProjects.map((group, index) => (
+      {projects.map((project, index) => (
         <SwiperSlide key={index}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-12">
-            {group.map((project, idx) => (
-              <ProjectCard
-                key={idx}
-                title={project.title}
-                description={project.description}
-                tags={project.tags}
-              />
-            ))}
+          <div className="grid grid-cols-1 w-full px-5">
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              tags={project.tags}
+            />
           </div>
         </SwiperSlide>
       ))}
