@@ -34,28 +34,28 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const fetchDepositAddress = async () => {
-    try {
-      const res = await fetch(`/api/deposit-address?coin=BTC&network=BTC`);
-      const data = await res.json();
-      if (res.ok) {
-        console.log(res);
-        console.log(data);
-      } else {
-        console.error("API Error:", data);
-        alert("Failed to fetch deposit address.");
-      }
-    } finally {
-    }
-  };
-  useEffect(() => {
-    setMounted(true);
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000); // Show loading for 2 seconds
+  // const fetchDepositAddress = async () => {
+  //   try {
+  //     const res = await fetch(`/api/deposit-address?coin=BTC&network=BTC`);
+  //     const data = await res.json();
+  //     if (res.ok) {
+  //       console.log(res);
+  //       console.log(data);
+  //     } else {
+  //       console.error("API Error:", data);
+  //       alert("Failed to fetch deposit address.");
+  //     }
+  //   } finally {
+  //   }
+  // };
+  // useEffect(() => {
+  //   setMounted(true);
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 2000); // Show loading for 2 seconds
 
-    return () => clearTimeout(timer);
-  }, []);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   if (!mounted) return null;
   if (loading)
@@ -95,12 +95,12 @@ export default function Home() {
                   View Projects
                 </Button>
               </ScrollLink>
-              <Button
+              {/* <Button
                 className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white"
                 onClick={() => fetchDepositAddress()}
               >
                 Test
-              </Button>
+              </Button> */}
               <ScrollLink to="contact" smooth={true} duration={500}>
                 <Button
                   variant="outline"
