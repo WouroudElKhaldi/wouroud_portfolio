@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import crypto from "crypto";
 import axios from "axios";
+import { AxiosError } from "axios";
 
 export async function GET(request: Request) {
   try {
@@ -37,10 +38,26 @@ export async function GET(request: Request) {
     });
 
     return NextResponse.json(response.data);
-  } catch (error: any) {
-    console.error("Binance API Error:", error.response?.data || error.message);
+  } catch (error: unknown) {
+    if (error instanceof AxiosError) {
+      console.error(
+        "Binance API Error:",
+        error.response?.data || error.message
+      );
+      return NextResponse.json(
+        { error: error.response?.data || error.message },
+        { status: 500 }
+      );
+    }
+
+    if (error instanceof Error) {
+      console.error("Unexpected Error:", error.message);
+      return NextResponse.json({ error: error.message }, { status: 500 });
+    }
+
+    console.error("Unknown error:", error);
     return NextResponse.json(
-      { error: error.response?.data || "Something went wrong" },
+      { error: "Something went wrong" },
       { status: 500 }
     );
   }
